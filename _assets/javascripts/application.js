@@ -10,15 +10,15 @@ $(document).on('turbolinks:load', function () {
   }
 
   // Initialize scrollreveal
-  sr.reveal('.reveal', {
-    distance: '0',
-    duration: 500,
-    easing: 'ease-in-out',
-    origin: 'top',
-    scale: 1,
-    reset: false,
-    viewFactor: 0
-  });
+  // sr.reveal('.reveal', {
+  //   distance: '0',
+  //   duration: 500,
+  //   easing: 'ease-in-out',
+  //   origin: 'top',
+  //   scale: 1,
+  //   reset: false,
+  //   viewFactor: 0
+  // });
 });
 
 window.sr = ScrollReveal({ reset: true });
