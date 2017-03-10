@@ -72,7 +72,7 @@ template<> struct Fibonacci<1>
 Now the compiler does its job and evaluates `Fibonacci<10>::value` to 55, which happens to be the tenth Fibonacci number.
 
 ## Primality test using template meta-programming
-A trivial primality test for a number p, is to do a linear scan over the numbers 2 to p - 1 and check whether p is divisible by none of them. Of course there are all kinds of improvements to make, but for the sake of simplicity we will not pursue these. We implement the primality test using the following recursion
+A trivial primality test for a number p, is to do a linear scan over the numbers 2 to p - 1 and check whether p is divisible by none of them. Of course there are all kinds of improvements to make, but for the sake of simplicity we will not pursue these. The primality test is implemented using the following recursion
 
 {% highlight c++ %}
 template <size_t p, size_t i> struct PrimalityTest
@@ -86,7 +86,7 @@ template <size_t p> struct PrimalityTest<p, 1>
 };
 {% endhighlight %}
 
-We're using integers as booleans. The specialization `PrimalityTest<p, 1>` guarantees the compiler will not get stuck in infinite recursion limbo. Furthermore, any prime number is of course divisible by 1, so `PrimalityTest<p, 1>::value == 1`. For any other `i` the value of `PrimalityTest<p, i>::value` will be 1 if `p` is neither divisible by `i` nor by any number less than `i`. The latter part is handled recursively.
+The specialization `PrimalityTest<p, 1>` guarantees the compiler will not get stuck in infinite recursion limbo. Furthermore, any prime number is of course divisible by 1, so `PrimalityTest<p, 1>::value == 1`. For any other `i` the value of `PrimalityTest<p, i>::value` will be 1 if `p` is neither divisible by `i` nor by any number less than `i`. The latter part is handled recursively.
 
 To call the primality test we can create another struct that does exactly this:
 
