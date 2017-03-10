@@ -25,6 +25,9 @@ social:
 # Important settings (change at own risk)
 
 assets:
+  compress:
+    css: true
+    js: true
   features:
     automatic_img_size: false
   sources:
