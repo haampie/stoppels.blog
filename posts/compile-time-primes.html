@@ -74,7 +74,7 @@
               <span class="article-list-minutes">
                 
                 
-                  9 minute read
+                  8 minute read
                 
               </span>
               <span class="article-list-divider">-</span>
@@ -144,7 +144,7 @@ fib.cc:6:13: note: in instantiation of template class 'Fibonacci&lt;184467440737
 <p>Now the compiler does its job and evaluates <code class="highlighter-rouge">Fibonacci&lt;10&gt;::value</code> to 55, which happens to be the tenth Fibonacci number.</p>
 
 <h2 id="primality-test-using-template-meta-programming">Primality test using template meta-programming</h2>
-<p>A trivial primality test for a number p, is to do a linear scan over the numbers 2 to p - 1 and check whether p is divisible by none of them. Of course there are all kinds of improvements to make, but for the sake of simplicity we will not pursue these. We implement the primality test using the following recursion</p>
+<p>A trivial primality test for a number p, is to do a linear scan over the numbers 2 to p - 1 and check whether p is divisible by none of them. Of course there are all kinds of improvements to make, but for the sake of simplicity we will not pursue these. The primality test is implemented using the following recursion</p>
 
 <figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">template</span> <span class="o">&lt;</span><span class="kt">size_t</span> <span class="n">p</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">i</span><span class="o">&gt;</span> <span class="k">struct</span> <span class="n">PrimalityTest</span>
 <span class="p">{</span>
@@ -156,7 +156,7 @@ fib.cc:6:13: note: in instantiation of template class 'Fibonacci&lt;184467440737
   <span class="k">enum</span> <span class="p">{</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">};</span>
 <span class="p">};</span></code></pre></figure>
 
-<p>We’re using integers as booleans. The specialization <code class="highlighter-rouge">PrimalityTest&lt;p, 1&gt;</code> guarantees the compiler will not get stuck in infinite recursion limbo. Furthermore, any prime number is of course divisible by 1, so <code class="highlighter-rouge">PrimalityTest&lt;p, 1&gt;::value == 1</code>. For any other <code class="highlighter-rouge">i</code> the value of <code class="highlighter-rouge">PrimalityTest&lt;p, i&gt;::value</code> will be 1 if <code class="highlighter-rouge">p</code> is neither divisible by <code class="highlighter-rouge">i</code> nor by any number less than <code class="highlighter-rouge">i</code>. The latter part is handled recursively.</p>
+<p>The specialization <code class="highlighter-rouge">PrimalityTest&lt;p, 1&gt;</code> guarantees the compiler will not get stuck in infinite recursion limbo. Furthermore, any prime number is of course divisible by 1, so <code class="highlighter-rouge">PrimalityTest&lt;p, 1&gt;::value == 1</code>. For any other <code class="highlighter-rouge">i</code> the value of <code class="highlighter-rouge">PrimalityTest&lt;p, i&gt;::value</code> will be 1 if <code class="highlighter-rouge">p</code> is neither divisible by <code class="highlighter-rouge">i</code> nor by any number less than <code class="highlighter-rouge">i</code>. The latter part is handled recursively.</p>
 
 <p>To call the primality test we can create another struct that does exactly this:</p>
 
