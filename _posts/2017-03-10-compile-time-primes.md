@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Compile-time primes"
-description: "Anyone who has seen C++ template meta-programming must have come across the compile-time prime number generator by Erwin Unruh. Since then the language has evolved and provides a very readible alternative to template meta-programming. In this post I'll show the classical and modern approach."
+description: "Anyone who has seen C++ template meta-programming must have come across the compile-time prime number generator by Erwin Unruh. Since then the language has evolved and provides a very readible alternative. In this post I'll touch on both the classical and modern approach."
 tags: [c++]
 ---
 
