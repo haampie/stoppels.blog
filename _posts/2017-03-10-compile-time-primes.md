@@ -86,7 +86,7 @@ template <size_t p> struct PrimalityTest<p, 1>
 };
 {% endhighlight %}
 
-We're using integers as booleans. The specialization `PrimalityTest<p, 1>` guarantees we will not get stuck in an infinite loop. Furthermore, any prime number is of course divisible by 1, so `PrimalityTest<p, 1>::value == 1`. For any other `i` the value of `PrimalityTest<p, i>::value` will be 1 if and only if it is not divisible by `i` and neither by any number smaller than `i`. The latter part is handled recursively.
+We're using integers as booleans. The specialization `PrimalityTest<p, 1>` guarantees the compiler will not get stuck in infinite recursion limbo. Furthermore, any prime number is of course divisible by 1, so `PrimalityTest<p, 1>::value == 1`. For any other `i` the value of `PrimalityTest<p, i>::value` will be 1 if `p` is neither divisible by `i` nor by any number less than `i`. The latter part is handled recursively.
 
 To call the primality test we can create another struct that does exactly this:
 
@@ -214,7 +214,7 @@ int main()
 
 The above code compiles just fine, which can only mean that *the compiler can count prime numbers efficiently in just 22 human-readable lines of code*.
 
-Unfortunately we cannot pass `N` as a parameter, as `bool is_prime[N]` would then be interpreted as a variable-sized object.
+Unfortunately we cannot pass `N` as a function parameter rather than a template parameter, as `bool is_prime[N]` would then be interpreted as a variable-sized object.
 
 ### Can we improve further? What are the limitations?
 One idea is to use STL algorithms to initialize the array with `true` as values. The problem however is that `std::fill` is not (and probably will never be) a `constexpr` function. This is because it will resort to `memset` to initialize the memory whenever it can.
