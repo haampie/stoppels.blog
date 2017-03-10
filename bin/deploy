@@ -8,11 +8,14 @@ set -e
 echo "Started deploying"
 
 # Checkout gh-pages branch.
-# if [ `git branch | grep gh-pages` ]
-# then
-#   git branch -D gh-pages
-# fi
-git checkout -b gh-pages
+if [ `git branch | grep gh-pages` ]
+then
+  git checkout gh-pages
+else
+  git checkout -b gh-pages
+fi
+
+git reset --hard master
 
 # Build site.
 bower install
@@ -26,7 +29,7 @@ rm -R _site/
 # Push to gh-pages.
 git add -fA
 git commit --allow-empty -m "$(git log -1 --pretty=%B) [ci skip]"
-# git push -f -q origin gh-pages
+git push -f -q origin gh-pages
 
 # Move back to previous branch.
 git checkout -
