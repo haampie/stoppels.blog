@@ -1,5 +1,5 @@
 !.keep
 *.DS_Store
 *.sass-cache
-/.asset-cache/*
+.asset-cache
 /_assets/bower/*
