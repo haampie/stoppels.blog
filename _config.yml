@@ -3,7 +3,7 @@
 name: Harmen Stoppels
 paginate: 25
 url: http://stoppels.blog
-blog_theme: dark # Or use dark
+blog_theme: light # Or use dark
 
 # Optional settings
 
@@ -59,6 +59,5 @@ gems:
   - jekyll-assets
   - jekyll-paginate
   - jekyll-sitemap
-  - jemoji
 paginate_path: "/posts/page/:num/"
 permalink: posts/:slug
