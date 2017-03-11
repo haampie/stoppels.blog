@@ -48,6 +48,8 @@ defaults:
       type: my_tags
     values:
       layout: articles_by_tag
+jekyll_tidy:
+  compress_html: true
 exclude:
   - .bowerrc
   - .travis.yml
@@ -62,5 +64,6 @@ gems:
   - jekyll-assets
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-tidy
 paginate_path: "/posts/page/:num/"
 permalink: posts/:slug

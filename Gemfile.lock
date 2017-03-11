@@ -21,10 +21,6 @@ GEM
     fastimage (2.1.0)
     ffi (1.9.18)
     forwardable-extended (2.6.0)
-    gemoji (3.0.0)
-    html-pipeline (2.5.0)
-      activesupport (>= 2)
-      nokogiri (>= 1.4)
     html-proofer (3.5.0)
       activesupport (>= 4.2, < 6.0)
       addressable (~> 2.3)
@@ -34,6 +30,8 @@ GEM
       parallel (~> 1.3)
       typhoeus (~> 0.7)
       yell (~> 2.0)
+    htmlbeautifier (1.2.1)
+    htmlcompressor (0.3.1)
     i18n (0.8.1)
     jekyll (3.4.2)
       addressable (~> 2.4)
@@ -58,13 +56,12 @@ GEM
       sass (~> 3.4)
     jekyll-sitemap (1.0.0)
       jekyll (~> 3.3)
+    jekyll-tidy (0.2.2)
+      htmlbeautifier
+      htmlcompressor
+      jekyll
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
-    jemoji (0.8.0)
-      activesupport (~> 4.0)
-      gemoji (~> 3.0)
-      html-pipeline (~> 2.2)
-      jekyll (>= 3.0)
     kramdown (1.13.2)
     liquid (3.0.6)
     listen (3.0.8)
@@ -109,7 +106,7 @@ DEPENDENCIES
   jekyll-assets
   jekyll-paginate
   jekyll-sitemap
-  jemoji
+  jekyll-tidy
   mini_magick
   sass
   uglifier
