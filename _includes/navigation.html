@@ -4,7 +4,7 @@
     {% if site.about_enabled == true %}
       <li>
         <a href="{{ 'about' | relative_url }}" title="About me">
-          <span class="icon icon-android-person"></span>
+          <svg class="icon icon-ion-android-person"><use xlink:href="#icon-ion-android-person"></use></svg>
         </a>
       </li>
     {% endif %}
@@ -67,7 +67,7 @@
     {% if site.rss_enabled == true %}
       <li>
         <a href="{{ 'feed.xml' | relative_url }}" target="_blank" title="RSS">
-          <span class="icon icon-social-rss"></span>
+          <svg class="icon icon-ion-social-rss"><use xlink:href="#icon-ion-social-rss"></use></svg>
         </a>
       </li>
     {% endif %}
