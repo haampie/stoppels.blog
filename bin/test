@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+set -e
+
+JEKYLL_ENV=production bundle exec jekyll build
+bundle exec htmlproofer --assume-extension _site/
+
+exit 0
