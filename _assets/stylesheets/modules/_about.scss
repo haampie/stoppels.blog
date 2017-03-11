@@ -4,7 +4,16 @@
 
 .about {
   padding: 100px 0;
-  h1 {
-    margin: 50px 0 15px;
-  }
+}
+
+.me-img {
+  border-radius: 100%;
+}
+
+.about-header {
+  display: flex;align-items: center;
+  margin-bottom: 1em;
+}
+.about-header h1 {
+  margin: 0 0 0 1em;
 }
