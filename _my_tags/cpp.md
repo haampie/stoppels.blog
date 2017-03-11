@@ -1,4 +1,4 @@
 ---
-slug: C++
+slug: cpp
 name: Anything on C++.
 ---

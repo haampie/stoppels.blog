@@ -2,7 +2,7 @@
 layout: post
 title: "Compile-time primes"
 description: "Anyone who has seen C++ template meta-programming must have come across the compile-time prime number generator by Erwin Unruh. Since then the language has evolved and provides a very readible alternative. In this post I'll touch on both the classical and modern approach."
-tags: [c++]
+tags: [cpp]
 ---
 
 The building blocks of C++ template meta-programming are usually `struct`s without any data members encapsulating a value stored in an `enum`. As a simple example consider
