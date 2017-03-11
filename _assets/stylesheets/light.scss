@@ -25,18 +25,18 @@ $base-accent-highlighted-color: darken($base-accent-color, 15);
 
 // Border color
 
-$base-border-color: $gray-lightest;
+$base-border-color: rgba(0, 0, 0, .1);
 
 // Page specific colors
 
-$body-background: $white;
+$body-background: #fff1e0;
 $header-logo-color: $black;
 $header-link-color: $gray-darker;
 $header-link-color-hover: $gray-darkest;
 $article-header-title-color: $gray-darkest;
 $article-header-description-color: $gray-dark;
 $article-post-titles-color: $gray-darkest;
-$article-footer-color: $gray-light;
+$article-footer-color: $gray;
 $article-footer-link-color: $gray-dark;
 $article-footer-link-color-hover: $gray-darkest;
 $article-paginator-color-hover: $gray-darkest;
