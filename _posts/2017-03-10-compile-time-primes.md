@@ -168,7 +168,7 @@ int main()
 }
 {% endhighlight %}
 
-However, this piece of code only compiles in C++14. Why? In C++11 `constexpr` functions cannot contain variable declarations and should in fact be as simple as a return statement. C++14 has greatly extended the allowed contents of a `constexpr` function body, which makes it possible to write code identical to what you would write for compile-time functions.
+However, this piece of code only compiles in C++14. Why? In C++11 `constexpr` functions cannot contain variable declarations and should in fact be as simple as a return statement. C++14 has greatly extended the allowed contents of a `constexpr` function body, which makes it possible to write code identical to what you would write for run-time functions.
 
 ## A compile-time prime sieve for counting prime numbers
 As a final example to appreciate the beauty and extend of what `constexpr` can do, let's implement a compile-time prime counting function using the sieve of Eratosthenes. The function `count_primes<N>()` returns the number of primes strictly smaller than `N`. Using some well-known prime sieving trickery, a relatively efficient implementation is:
