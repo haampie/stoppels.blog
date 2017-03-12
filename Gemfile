@@ -10,4 +10,3 @@ gem "mini_magick"
 gem "sass"
 gem "uglifier"
 gem 'jekyll-tidy'
-
