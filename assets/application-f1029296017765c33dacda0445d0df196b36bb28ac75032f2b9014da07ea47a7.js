@@ -1,1 +1,0 @@
-$(document).on("turbolinks:load",function(){$(".fluidbox-trigger").fluidbox()});
