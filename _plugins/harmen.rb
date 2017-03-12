@@ -51,7 +51,7 @@ Jekyll::Hooks.register(:site, :post_write) do |site|
           :raw => matches[1]
         }, [file]);
 
-        newcontents = content.gsub /<style>(.*)<\/style>/m, "<style>" + essential + "</style>"
+        newcontents = content.gsub /<style>(.*)<\/style>/m, "<style>" + essential.strip + "</style>"
 
         File.open(file, "w") do |f|
             f.write newcontents
