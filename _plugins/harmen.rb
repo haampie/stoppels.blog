@@ -22,7 +22,7 @@ module UncssWrapper
         tempfileUncssrc.flush
 
         begin
-            result = `uncss --uncssrc '#{tempfileUncssrc.path}' '#{files.join("' '")}' 2>&1`
+            result = `uncss -S 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css' --uncssrc '#{tempfileUncssrc.path}' '#{files.join("' '")}' 2>&1`
         rescue Exception => e
             raise Error, "uncss failed: #{e} :: #{result}"
         ensure
