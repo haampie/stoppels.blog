@@ -80,7 +80,7 @@ u^* & 0
 \end{bmatrix}
 \begin{bmatrix}
 t \\
-0
+z
 \end{bmatrix}
 =
 \begin{bmatrix}
