@@ -2,7 +2,7 @@
 layout: post
 title: "Jacobi-Davidson"
 description: "As part of Google Summer of Code I'm implementing several iterative methods for linear systems of equations and eigenvalue problems in Julia. Up to now I have studied Jacobi-Davidson and have a poor man's version working. The first post is about my notes on the method."
-tags: [julia,gsoc]
+tags: [gsoc, julia]
 ---
 
 Jacobi-Davidson is an iterative method for approximately solving the generalized eigenvalue problem 
