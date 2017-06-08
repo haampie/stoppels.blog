@@ -137,4 +137,4 @@ And produces harmonic Ritz values like this
 
 The point is that harmonic Ritz values come close to our target {% katex %}\tau{% endkatex %} only when they converge to an eigenvalue near {% katex %}\tau{% endkatex %}.
 
-For restarts this means that retaining Ritz vectors with Ritz values close to {% katex %}\tau{% endkatex %} will be a good strategy. In sharp contrast with ordinary Ritz values, where lots of Ritz values near our target are useless to retain, since they are on their way converging to exterior eigenvalues.
+For restarts this means that retaining harmonic Ritz vectors with harmonic Ritz values close to {% katex %}\tau{% endkatex %} will be a good strategy. In sharp contrast with ordinary Ritz values, where lots of Ritz values near our target are useless to retain, since they are on their way converging to exterior eigenvalues.
